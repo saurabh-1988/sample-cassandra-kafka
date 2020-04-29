@@ -23,7 +23,7 @@ import com.datastax.driver.core.utils.UUIDs;
 import com.learnnew.spring.data.cassandra.model.Tutorial;
 import com.learnnew.spring.data.cassandra.repository.TutorialRepository;
 
-@CrossOrigin(origins = "http://localhost:8081")
+
 @RestController
 @RequestMapping("/api")
 public class TutorialController {
