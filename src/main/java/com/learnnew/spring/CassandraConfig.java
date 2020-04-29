@@ -19,6 +19,9 @@ import org.springframework.data.cassandra.repository.config.EnableCassandraRepos
 public class CassandraConfig extends AbstractCassandraConfiguration {
 	@Value("${spring.data.cassandra.keyspacename}")
 	protected String keyspaceName;
+	
+	@Value("${spring.data.cassandra.contact-points}")
+	protected String contactpoints;
 	//private String basePackages = "com.learnnew.spring.data.cassandra";
 
 	@Override
@@ -37,5 +40,9 @@ public class CassandraConfig extends AbstractCassandraConfiguration {
 	  }
 	  @Override
 	  protected boolean getMetricsEnabled() { return false; }
+	  @Override
+	  protected String getContactPoints() {
+	    return contactpoints;
+	  }
 
 }
